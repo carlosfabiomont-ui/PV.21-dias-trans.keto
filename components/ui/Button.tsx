@@ -35,7 +35,7 @@ export const Button: React.FC<ButtonProps> = ({ href, target, rel, className = '
         className={baseClasses} 
         target={target} 
         rel={rel}
-        {...(props as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
+        {...(props as unknown as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
       >
         <span className="relative z-10 flex items-center gap-2">{children}</span>
         {shineEffect}

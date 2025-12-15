@@ -3,7 +3,8 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Benefits } from './components/Benefits';
 import { Transformation } from './components/Transformation';
-import { Bonuses } from './components/Bonuses'; // Nova importação
+import { WhatYouGet } from './components/WhatYouGet'; // Novo componente
+import { Bonuses } from './components/Bonuses';
 import { Testimonials } from './components/Testimonials';
 import { Urgency } from './components/Urgency';
 import { FAQ } from './components/FAQ';
@@ -21,7 +22,8 @@ function App() {
         <Hero />
         <Benefits />
         <Transformation />
-        <Bonuses /> {/* Inserido antes dos depoimentos para aumentar valor percebido */}
+        <WhatYouGet /> {/* Adicionado para aumentar tangibilidade antes do preço */}
+        <Bonuses />
         <Testimonials />
         <Urgency />
         <FAQ />
