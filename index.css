@@ -1,5 +1,17 @@
-/* Deixamos este arquivo limpo pois estamos usando o CDN no HTML para garantir o funcionamento visual imediato */
 body {
   margin: 0;
+  padding: 0;
   background-color: #000000;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Fallback para gradiente se o Tailwind falhar em aplicar via JS */
+.text-gold-gradient {
+  background: linear-gradient(to right, #FFD700, #FDB931, #DAA520);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }

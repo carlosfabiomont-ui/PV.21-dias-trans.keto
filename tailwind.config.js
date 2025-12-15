@@ -7,11 +7,19 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        gold: {
+          DEFAULT: '#DAA520',
+          light: '#FDB931',
+          dark: '#B8860B',
+        }
+      },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
       },
       animation: {
         'fade-in-up': 'fadeInUp 1s ease forwards',
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       keyframes: {
         fadeInUp: {
