@@ -1,0 +1,5 @@
+/* Deixamos este arquivo limpo pois estamos usando o CDN no HTML para garantir o funcionamento visual imediato */
+body {
+  margin: 0;
+  background-color: #000000;
+}
