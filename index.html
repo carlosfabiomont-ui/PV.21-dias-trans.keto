@@ -29,7 +29,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- ABORDAGEM NOVA: Tailwind CDN (Garante o estilo mesmo se o build falhar) -->
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -60,14 +60,12 @@
       }
     </script>
 
-    <!-- Estilos base de reset para evitar tela branca -->
     <style>
       body {
         background-color: #000000;
         color: #ffffff;
         font-family: 'Inter', sans-serif;
       }
-      /* Garante que o gradiente de texto funcione */
       .text-gold-gradient {
         background: linear-gradient(to right, #FFD700, #FDB931, #DAA520);
         -webkit-background-clip: text;
@@ -77,11 +75,11 @@
   <script type="importmap">
 {
   "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
     "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
-    "vite": "https://esm.sh/vite@^7.3.0"
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
   }
 }
 </script>
