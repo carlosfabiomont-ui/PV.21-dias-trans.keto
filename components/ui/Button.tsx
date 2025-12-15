@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Definimos uma interface que aceita props tanto de botão quanto de âncora para evitar erros de build
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
   target?: string;
@@ -27,8 +28,15 @@ export const Button: React.FC<ButtonProps> = ({ href, target, rel, className = '
   );
 
   if (href) {
+    // Cast para any ou AnchorHTMLAttributes para evitar erro de TypeScript ao passar props de botão para âncora
     return (
-      <a href={href} className={baseClasses} target={target} rel={rel}>
+      <a 
+        href={href} 
+        className={baseClasses} 
+        target={target} 
+        rel={rel}
+        {...(props as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
+      >
         <span className="relative z-10 flex items-center gap-2">{children}</span>
         {shineEffect}
       </a>
