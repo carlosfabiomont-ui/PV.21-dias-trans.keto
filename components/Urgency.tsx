@@ -3,9 +3,9 @@ import { Button } from './ui/Button';
 
 export const Urgency: React.FC = () => {
   const [timeLeft, setTimeLeft] = useState({
-    hours: 23,
-    minutes: 47,
-    seconds: 35
+    hours: 0,
+    minutes: 14,
+    seconds: 59
   });
 
   useEffect(() => {
@@ -15,11 +15,8 @@ export const Urgency: React.FC = () => {
           return { ...prev, seconds: prev.seconds - 1 };
         } else if (prev.minutes > 0) {
           return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
-        } else if (prev.hours > 0) {
-          return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
         } else {
-          // Reset for demo purposes if it hits zero
-          return { hours: 23, minutes: 59, seconds: 59 };
+          return { hours: 0, minutes: 15, seconds: 0 };
         }
       });
     }, 1000);
@@ -30,42 +27,48 @@ export const Urgency: React.FC = () => {
   const pad = (num: number) => num.toString().padStart(2, '0');
 
   return (
-    <section id="oferta" className="py-20 px-5 text-center bg-gradient-to-br from-[#DAA520]/10 to-transparent border-y border-[#DAA520]/20">
+    <section id="oferta" className="py-24 px-5 text-center bg-gradient-to-b from-black to-[#111] border-y border-gold/10">
       <div className="max-w-4xl mx-auto flex flex-col items-center">
-        <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-          ⏰ Oferta Por Tempo Limitado
-        </h2>
-        <p className="text-xl text-gray-400 mb-8">Esta oferta expira em:</p>
+        <div className="bg-red-600 text-white text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest mb-6 animate-bounce">
+          Promoção por tempo limitado
+        </div>
         
-        <div className="flex justify-center flex-wrap gap-4 md:gap-8 my-10">
+        <h2 className="text-3xl md:text-5xl font-black text-white mb-6 tracking-tighter">
+          Não deixe sua saúde para amanhã
+        </h2>
+        
+        <p className="text-lg text-gray-400 mb-10 max-w-xl">
+          O valor de <span className="text-white font-bold">R$ 37,00</span> é exclusivo para as próximas vagas. Depois disso, o preço retornará para R$ 147,00.
+        </p>
+        
+        <div className="flex justify-center gap-4 mb-12">
           {[
-            { label: 'Horas', value: timeLeft.hours },
-            { label: 'Minutos', value: timeLeft.minutes },
-            { label: 'Segundos', value: timeLeft.seconds }
+            { label: 'Min', value: timeLeft.minutes },
+            { label: 'Seg', value: timeLeft.seconds }
           ].map((item, index) => (
-            <div key={index} className="bg-[#DAA520]/10 border-2 border-[#DAA520]/30 rounded-2xl p-6 min-w-[110px] md:min-w-[140px] backdrop-blur-sm">
-              <span className="block text-4xl md:text-5xl font-black text-[#DAA520]">
+            <div key={index} className="bg-gold/5 border border-gold/20 rounded-2xl p-6 min-w-[100px] backdrop-blur-sm">
+              <span className="block text-5xl font-black text-gold">
                 {pad(item.value)}
               </span>
-              <span className="text-xs md:text-sm text-gray-500 font-bold uppercase tracking-wider mt-2 block">
+              <span className="text-[10px] text-gray-500 font-bold uppercase tracking-widest mt-2 block">
                 {item.label}
               </span>
             </div>
           ))}
         </div>
 
-        <p className="text-lg md:text-xl text-[#DAA520] font-bold animate-pulse mb-8">
-          ⚡ Apenas 47 vagas restantes neste lote
-        </p>
-
         <Button 
           href="https://pay.hotmart.com/C103167515J" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="w-full md:w-auto px-10"
+          className="w-full md:w-auto px-16 text-xl"
         >
-          GARANTIR MINHA VAGA AGORA
+          GARANTIR MEU ACESSO POR R$ 37
         </Button>
+        
+        <p className="mt-6 text-gray-600 text-sm">
+          Acesso imediato enviado para o seu e-mail após a confirmação.
+        </p>
       </div>
     </section>
   );

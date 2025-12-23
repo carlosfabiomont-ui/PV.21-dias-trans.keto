@@ -3,61 +3,32 @@ import { Button } from './ui/Button';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 px-4 overflow-hidden flex flex-col items-center justify-center text-center">
+    <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 px-4 overflow-hidden flex flex-col items-center justify-center text-center bg-black">
       
-      {/* Fundo com gradiente radial sutil */}
-      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-gray-900 via-black to-black -z-10" />
-      
-      {/* Glow Dourado no Topo */}
-      <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gold/10 blur-[100px] rounded-full pointer-events-none" />
+      {/* Background Effects */}
+      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-900 via-black to-black -z-10" />
+      <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gold/10 blur-[130px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center gap-12">
+      <div className="max-w-6xl mx-auto relative z-10 flex flex-col items-center">
         
-        {/* Coluna da Esquerda: Copy (Texto de Venda) */}
-        <div className="flex-1 text-center md:text-left max-w-2xl">
-            {/* Etiqueta de Escassez */}
-            <div className="animate-fade-in-up inline-flex items-center gap-2 bg-red-600/20 border border-red-500/50 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm mx-auto md:mx-0">
-              <span className="flex h-2 w-2 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-              </span>
-              <span className="text-red-400 font-bold text-[10px] md:text-xs uppercase tracking-widest">Atenção: Oferta Liberada Hoje</span>
-            </div>
-
-            <h1 className="animate-fade-in-up text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tighter mb-6 drop-shadow-2xl">
-              RESETE SEU METABOLISMO E <span className="text-gold-gradient">DERRETA GORDURA</span> SEM PASSAR FOME
-            </h1>
-
-            <p className="animate-fade-in-up delay-100 text-gray-300 text-lg md:text-xl mb-8 leading-relaxed font-normal">
-              O Guia Digital passo a passo para aplicar o protocolo <b className="text-white">Keto Carnívora</b>. Simples, barato e direto ao ponto. Baixe agora e comece amanhã.
-            </p>
-
-            <div className="animate-fade-in-up delay-200 flex flex-col md:flex-row items-center gap-4 justify-center md:justify-start">
-              <Button 
-                href="https://pay.hotmart.com/C103167515J" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-full md:w-auto min-w-[300px] shadow-[0_0_30px_rgba(218,165,32,0.3)] animate-pulse-slow"
-              >
-                BAIXAR MEU PROTOCOLO AGORA
-              </Button>
-            </div>
-             <div className="mt-4 flex flex-col md:flex-row items-center gap-2 text-sm text-gray-500 justify-center md:justify-start animate-fade-in-up delay-300">
-                <p>⚡ Acesso imediato no e-mail</p>
-                <span className="hidden md:block">•</span>
-                <p>🛡️ Garantia de 7 dias</p>
-              </div>
+        {/* Badge de Oferta */}
+        <div className="animate-fade-in-up mb-6 inline-flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-full px-5 py-1.5 backdrop-blur-sm">
+          <span className="text-gold font-bold text-[10px] md:text-xs uppercase tracking-[0.2em]">Acesso Vitalício Liberado</span>
         </div>
 
-        {/* Coluna da Direita: Mockup 3D Gerado por CSS (Sem Imagens Externas) */}
-        <div className="flex-1 w-full flex justify-center items-center animate-fade-in-up delay-300 relative px-4 md:px-0 mt-8 md:mt-0">
-           
-           {/* Glow atrás do mockup */}
-           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-[#DAA520]/20 blur-[80px] rounded-full pointer-events-none" />
-           
+        {/* Headline de Impacto Total */}
+        <h1 className="animate-fade-in-up text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] tracking-tighter mb-6 max-w-5xl">
+          RESETE SEU METABOLISMO E <span className="text-gold-gradient italic">SEQUE A BARRIGA</span> EM APENAS 21 DIAS
+        </h1>
+
+        <p className="animate-fade-in-up delay-100 text-gray-300 text-lg md:text-2xl mb-12 leading-relaxed max-w-3xl mx-auto">
+          O protocolo passo a passo de <span className="text-white font-bold">Keto Carnívora</span> para quem quer emagrecer rápido, sem passar fome e sem gastar horas na academia.
+        </p>
+
+        {/* Mockup 3D do Produto (Visual do Kit) - Isso substitui o vídeo */}
+        <div className="animate-fade-in-up delay-200 w-full flex justify-center mb-12 scale-90 md:scale-100">
            <div className="mockup-scene animate-float">
-              
-              {/* 1. O Checklist (Card Atrás) */}
+              {/* O Checklist (Card Atrás) */}
               <div className="mockup-card">
                  <div className="border-b-2 border-gray-200 pb-2 mb-2">
                     <div className="text-[10px] text-gray-500 font-bold uppercase">Checklist Diário</div>
@@ -74,9 +45,8 @@ export const Hero: React.FC = () => {
                  </div>
               </div>
 
-              {/* 2. A Caixa Principal (Livro/Guia) */}
+              {/* A Caixa Principal */}
               <div className="mockup-box">
-                  {/* Frente da Caixa */}
                   <div className="box-face box-front">
                       <div className="border border-gold/30 rounded-full p-2 mb-4">
                         <span className="text-2xl">🔥</span>
@@ -86,13 +56,12 @@ export const Hero: React.FC = () => {
                       <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mb-4"></div>
                       <p className="text-gray-400 text-[10px] uppercase tracking-widest text-center">Protocolo Oficial<br/>21 Dias</p>
                   </div>
-                  {/* Lombada da Caixa */}
                   <div className="box-face box-side">
                       <span className="box-spine-text">DESAFIO 21 DIAS</span>
                   </div>
               </div>
 
-              {/* 3. O Celular (App) */}
+              {/* O Celular */}
               <div className="mockup-phone">
                   <div className="phone-notch"></div>
                   <div className="phone-screen flex flex-col">
@@ -103,18 +72,8 @@ export const Hero: React.FC = () => {
                               <div className="h-1.5 bg-white/10 w-10 rounded"></div>
                           </div>
                       </div>
-                      {/* Apps Fictícios */}
                       <div className="space-y-3 mt-2">
                           <div className="bg-white/10 p-2 rounded-lg border border-white/5">
-                              <div className="flex justify-between items-center mb-1">
-                                  <div className="text-[8px] text-gold font-bold">CARDÁPIO</div>
-                              </div>
-                              <div className="h-1 bg-white/10 rounded w-full"></div>
-                          </div>
-                          <div className="bg-white/10 p-2 rounded-lg border border-white/5">
-                              <div className="flex justify-between items-center mb-1">
-                                  <div className="text-[8px] text-gold font-bold">JEJUM</div>
-                              </div>
                               <div className="h-1 bg-white/10 rounded w-full"></div>
                           </div>
                           <div className="bg-gold/20 p-2 rounded-lg border border-gold/30 mt-auto">
@@ -123,8 +82,28 @@ export const Hero: React.FC = () => {
                       </div>
                   </div>
               </div>
-
            </div>
+        </div>
+
+        {/* CTA e Preço no Hero */}
+        <div className="animate-fade-in-up delay-300 flex flex-col items-center gap-4 w-full">
+          <div className="mb-2">
+            <span className="text-gray-500 line-through text-lg">De R$ 147,00</span>
+            <span className="text-white text-3xl font-black ml-3">Por apenas R$ 37,00</span>
+          </div>
+          <Button 
+            href="https://pay.hotmart.com/C103167515J" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-full md:w-auto min-w-[320px] md:min-w-[450px] text-xl py-6 shadow-[0_0_50px_rgba(218,165,32,0.4)]"
+          >
+            QUERO O PROTOCOLO COMPLETO
+          </Button>
+          <p className="text-gray-500 text-sm mt-2 flex items-center gap-2">
+            <span>🛡️ Compra 100% Segura</span>
+            <span>•</span>
+            <span>⚡ Acesso Imediato no E-mail</span>
+          </p>
         </div>
 
       </div>

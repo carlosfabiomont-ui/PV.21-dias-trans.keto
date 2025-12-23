@@ -1,9 +1,10 @@
 import React from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
+import { SuccessStories } from './components/SuccessStories'; // Novo componente de depoimentos de impacto
 import { Benefits } from './components/Benefits';
 import { Transformation } from './components/Transformation';
-import { WhatYouGet } from './components/WhatYouGet'; // Novo componente
+import { WhatYouGet } from './components/WhatYouGet';
 import { Bonuses } from './components/Bonuses';
 import { Testimonials } from './components/Testimonials';
 import { Urgency } from './components/Urgency';
@@ -20,11 +21,13 @@ function App() {
       
       <main>
         <Hero />
+        {/* Prova Social de Impacto logo após a promessa principal */}
+        <SuccessStories /> 
         <Benefits />
         <Transformation />
-        <WhatYouGet /> {/* Adicionado para aumentar tangibilidade antes do preço */}
+        <Testimonials /> {/* Mural de depoimentos estilo social media para reforçar a comunidade */}
+        <WhatYouGet />
         <Bonuses />
-        <Testimonials />
         <Urgency />
         <FAQ />
         <FinalCTA />
