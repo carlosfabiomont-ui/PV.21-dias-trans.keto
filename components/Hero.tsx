@@ -89,7 +89,7 @@ export const Hero: React.FC = () => {
         <div className="animate-fade-in-up delay-300 flex flex-col items-center gap-4 w-full">
           <div className="mb-2">
             <span className="text-gray-500 line-through text-lg">De R$ 147,00</span>
-            <span className="text-white text-3xl font-black ml-3">Por apenas R$ 37,00</span>
+            <span className="text-white text-3xl font-black ml-3">Por apenas R$ 27,00</span>
           </div>
           <Button 
             href="https://pay.hotmart.com/C103167515J" 

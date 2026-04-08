@@ -38,7 +38,7 @@ export const Urgency: React.FC = () => {
         </h2>
         
         <p className="text-lg text-gray-400 mb-10 max-w-xl">
-          O valor de <span className="text-white font-bold">R$ 37,00</span> é exclusivo para as próximas vagas. Depois disso, o preço retornará para R$ 147,00.
+          O valor de <span className="text-white font-bold">R$ 27,00</span> é exclusivo para as próximas vagas. Depois disso, o preço retornará para R$ 147,00.
         </p>
         
         <div className="flex justify-center gap-4 mb-12">
@@ -63,7 +63,7 @@ export const Urgency: React.FC = () => {
           rel="noopener noreferrer"
           className="w-full md:w-auto px-16 text-xl"
         >
-          GARANTIR MEU ACESSO POR R$ 37
+          GARANTIR MEU ACESSO POR R$ 27
         </Button>
         
         <p className="mt-6 text-gray-600 text-sm">

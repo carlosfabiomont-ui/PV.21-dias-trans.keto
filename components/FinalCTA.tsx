@@ -17,7 +17,7 @@ export const FinalCTA: React.FC = () => {
             </div>
             <h3 className="text-2xl font-bold text-white mb-3">Sua Satisfação ou seu Dinheiro de Volta</h3>
             <p className="text-gray-400">
-                Você tem 7 dias para testar todo o material. Se não gostar do que vir, ou achar que não é pra você, devolvemos cada centavo do seu investimento de R$ 37,00. O risco é todo meu.
+                Você tem 7 dias para testar todo o material. Se não gostar do que vir, ou achar que não é pra você, devolvemos cada centavo do seu investimento de R$ 27,00. O risco é todo meu.
             </p>
         </div>
 
@@ -33,7 +33,7 @@ export const FinalCTA: React.FC = () => {
           <div className="bg-black/80 rounded-3xl p-8 mb-10 border border-gold/20 max-w-sm mx-auto shadow-inner">
             <div className="text-gray-500 line-through text-xl mb-2">De R$ 147,00</div>
             <div className="text-white text-7xl font-black tracking-tighter mb-4">
-              R$ 37,00
+              R$ 27,00
             </div>
             <div className="text-gold font-bold uppercase tracking-widest text-xs py-2 px-4 bg-gold/10 rounded-full inline-block">
               PAGAMENTO ÚNICO

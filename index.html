@@ -2,6 +2,24 @@
 <html lang="pt-BR" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      // Fix for "Cannot set property fetch of #<Window> which has only a getter"
+      // This happens when tracking scripts (like Facebook Pixel) try to patch fetch
+      // in environments where it's read-only.
+      (function() {
+        try {
+          var _fetch = window.fetch;
+          Object.defineProperty(window, 'fetch', {
+            enumerable: true,
+            configurable: true,
+            get: function() { return _fetch; },
+            set: function(v) { _fetch = v; }
+          });
+        } catch (e) {
+          console.warn('Could not make window.fetch writable:', e);
+        }
+      })();
+    </script>
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>21 Dias de Transformação Keto Carnívora</title>
@@ -25,42 +43,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              gold: {
-                DEFAULT: '#DAA520',
-                light: '#FDB931',
-                dark: '#B8860B',
-              }
-            },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-            animation: {
-              'fade-in-up': 'fadeInUp 1s ease forwards',
-              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              'float': 'float 6s ease-in-out infinite',
-            },
-            keyframes: {
-              fadeInUp: {
-                'from': { opacity: '0', transform: 'translateY(30px)' },
-                'to': { opacity: '1', transform: 'translateY(0)' },
-              },
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-20px)' },
-              }
-            }
-          }
-        }
-      }
-    </script>
 
     <style>
       body {
@@ -192,18 +174,7 @@
         opacity: 0.9;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "vite": "https://esm.sh/vite@^7.3.0",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
-  }
-}
-</script>
-</head>
+  </head>
   <body class="bg-black text-white antialiased">
     <!-- Meta Pixel NoScript -->
     <noscript><img height="1" width="1" style="display:none"

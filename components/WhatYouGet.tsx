@@ -29,7 +29,7 @@ export const WhatYouGet: React.FC = () => {
       <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-black text-white mb-6 tracking-tight">
-            Tudo o que você leva por apenas <span className="text-gold">R$ 37</span>
+            Tudo o que você leva por apenas <span className="text-gold">R$ 27</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Você terá em mãos o método exato que já transformou milhares de corpos, entregue de forma digital e imediata.
